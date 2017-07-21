@@ -10,7 +10,9 @@
   <button (click)="getGeoCode(latInput.value, lngInput.value)">Submit</button>
 </form>
 
-<h1>GeoCode Address is {{GeoCodeResults}}</h1>
+<div *ngIf="GeoCodeResults">
+  <h1>GeoCode Address is {{GeoCodeResults}}</h1>
+</div>
 
 <hr>
 
@@ -30,5 +32,7 @@
   <button (click)="getLatLng(addressInput.value, cityInput.value, stateInput.value)">Submit</button>
 </form>
 
-<h1>latitude: {{LatLngResults.lat}}</h1>
-<h1>longitude: {{LatLngResults.lng}}</h1>
+<div *ngIf="LatLngResults">
+  <h1>latitude: {{LatLngResults.lat}}</h1>
+  <h1>longitude: {{LatLngResults.lng}}</h1>
+</div>

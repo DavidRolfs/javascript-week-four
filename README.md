@@ -1,28 +1,47 @@
 # JavascriptWeekFour
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+## Geocode api
 
-## Development server
+####  July 21th, 2017_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### By _**David Rolfs**_
 
-## Code scaffolding
+## Description
+Webpage allows the user to enter in the latitude and longitude of a geocode which outputs the specific address of that location. The web page does the reverse as well and lets the user input and address and it returns the latitude and longitude.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Repository
+https://github.com/DavidRolfs/javascript-week-four
 
-## Build
+## Specs
+| Description | input | output |
+| ------------- |:-------------:| -----:|
+|Webpage has latitude and longitude form| inputs latitude and longitude | exact address of that location displays |
+|Webpage has address form input | inputs address, city, state | latitude and longitude of address displays |
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Setup/Installation Requirements
+* Make sure npm, node.js, and typescript are installed on your computer.
+* Type _git clone https://github.com/DavidRolfs/javascript-week-four _ into your teminal.
+* Install promise-polyfill patch npm install promise-polyfill --save-exact
+* Sign up for a api key at https://developers.google.com/maps/documentation/geocoding/start
+* Click _Get A Key_
+* In the app folder of this project, create the file 'api-keys.ts'.
+* Paste
+      export const geoKey = "with your given key inside the quotes"
+* In the terminal enter npm install bower install ng serve
+* Webpage will be running on `http://localhost:4200/`.
 
-## Running end-to-end tests
+## Known bugs
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Support and contact details
+rolfs97@yahoo.com
 
-## Further help
+## Technologies Used
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+_HTML, CSS, JavaScript, jQuery, Bootstrap, SASS, NodeJS, Angular 2.0, google api, typescript_
+
+### License
+ This program is licensed under MIT license.
+
+Copyright (c) 2017 **_David Rolfs_**

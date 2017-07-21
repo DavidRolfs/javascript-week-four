@@ -10,6 +10,4 @@
   <button (click)="getGeoCode(latInput.value, lngInput.value)">Submit</button>
 </form>
 
-<div *ngFor="let GeoCodeResult of GeoCodeResults">
-  <li>Address: {{GeoCodeResult.address}}</li>
-</div>
+<h1>GeoCode Address is {{GeoCodeResults}}</h1>

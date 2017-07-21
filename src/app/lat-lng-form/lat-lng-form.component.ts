@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 //import { Observable } from 'rxjs/Observable';
 import { GeoCodeApiService } from '../geo-code-api.service';
-import { GeoCodeResult } from '../geo-code-result.model'
+import { GeoCodeResult } from '../geo-code-result.model';
 
 @Component({
   selector: 'app-lat-lng-form',
@@ -11,12 +11,12 @@ import { GeoCodeResult } from '../geo-code-result.model'
 })
 
 export class LatLngFormComponent {
-  GeoCodeResults: GeoCodeResult[];
+   GeoCodeResults: string=null;
 
   constructor(private geoCodeApiService: GeoCodeApiService) { }
 
   getGeoCode(lat: string, lng: string) {
-      this.geoCodeApiService.getByLatAndLng(lat, lng).subscribe(response => {
+      this.geoCodeApiService.getByLatAndLng(lat, lng).subscribe(response =>{
           this.GeoCodeResults = response.json().results[0].formatted_address;
           console.log(this.GeoCodeResults);
       });

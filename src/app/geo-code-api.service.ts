@@ -9,7 +9,7 @@ export class GeoCodeApiService {
   constructor(private http: Http) { }
 
   getByLatAndLng(lat: string, lng: string) {
-  return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=" +geoKey);
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=" +geoKey)
   }
 
 }

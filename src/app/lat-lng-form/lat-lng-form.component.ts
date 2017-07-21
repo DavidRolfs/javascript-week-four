@@ -12,6 +12,7 @@ import { GeoCodeResult } from '../geo-code-result.model';
 
 export class LatLngFormComponent {
    GeoCodeResults: string=null;
+   LatLngResults: string=null;
 
   constructor(private geoCodeApiService: GeoCodeApiService) { }
 
@@ -21,6 +22,13 @@ export class LatLngFormComponent {
           console.log(this.GeoCodeResults);
       });
     }
+
+    getLatLng(address: string, city: string, state: string) {
+        this.geoCodeApiService.getByAddress(address, city, state).subscribe(response =>{
+            this.LatLngResults = response.json().results[0].geometry.location
+            console.log(this.LatLngResults);
+        });
+      }
 
 
 }

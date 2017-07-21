@@ -1,0 +1,15 @@
+<form>
+  <div class="form-group">
+    <label for="lat">latitude</label>
+    <input type=text #latInput>
+  </div>
+  <div class="form-group">
+    <label for="lng">longitude</label>
+    <input type=text #lngInput>
+  </div>
+  <button (click)="getGeoCode(latInput.value, lngInput.value)">Submit</button>
+</form>
+
+<div *ngFor="let GeoCodeResult of GeoCodeResults">
+  <li>Address: {{GeoCodeResult.address}}</li>
+</div>
